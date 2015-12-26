@@ -4,7 +4,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 import portstand.web.WebConfig;
 
-public class SpitterWebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class PortStandWebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
   
   @Override
   protected Class<?>[] getRootConfigClasses() {

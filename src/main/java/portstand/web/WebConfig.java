@@ -15,6 +15,12 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @ComponentScan("portstand.web")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
+  @Override
+  public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    super.addResourceHandlers(registry);
+    registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+  }
+
   @Bean
   public ViewResolver viewResolver() {
     InternalResourceViewResolver resolver = new InternalResourceViewResolver();
@@ -22,16 +28,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     resolver.setSuffix(".jsp");
     return resolver;
   }
-  
+
   @Override
   public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
     configurer.enable();
-  }
-  
-  @Override
-  public void addResourceHandlers(ResourceHandlerRegistry registry) {
-    // TODO Auto-generated method stub
-    super.addResourceHandlers(registry);
   }
 
 }

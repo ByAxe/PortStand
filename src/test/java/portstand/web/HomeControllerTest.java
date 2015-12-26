@@ -16,29 +16,4 @@ public class HomeControllerTest {
         mockMvc.perform(get("/"))
                 .andExpect(view().name("index"));
     }
-
-    @Test
-    public void testResumePage() throws Exception {
-        mockMvc.perform(get("/resume"))
-                .andExpect(view().name("resume"));
-    }
-
-    @Test
-    public void testCVPage() throws Exception {
-        mockMvc.perform(get("/cv"))
-                .andExpect(view().name("cv"));
-    }
-
-    @Test
-    public void testPortfolioPage() throws Exception {
-        mockMvc.perform(get("/portfolio"))
-                .andExpect(view().name("portfolio"));
-    }
-
-    @Test
-    public void testContactsPage() throws Exception {
-        mockMvc.perform(get("/contacts"))
-                .andExpect(view().name("contacts"));
-    }
-
 }
